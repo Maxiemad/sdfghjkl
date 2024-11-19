@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Example 1</title>
+    <link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #a5fb73;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            transition:
+                background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .download-icon {
+            margin-right: 5px;
+        }
+
+        .download-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background-color:
+                rgba(255, 255, 255, 0.3);
+            transform:
+                translateX(-50%) scaleX(0);
+            transition:
+                transform 0.5s ease-in-out;
+            z-index: 1;
+        }
+
+        .download-btn:hover::after {
+            transform:
+                translateX(-50%) scaleX(1);
+        }
+    </style>
+</head>
+
+<body>
+    <h3>
+        Download Button with Transition
+    </h3>
+    <a href="#" class="download-btn">
+        <i class="fas fa-download download-icon"></i>
+        Download
+    </a>
+</body>
+
+</html>
